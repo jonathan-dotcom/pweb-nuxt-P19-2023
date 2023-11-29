@@ -36,6 +36,12 @@ const Blog = {
       type: 'textarea',
       required: true,
     },
+    {
+      name: 'Media',
+      type: 'relationship',
+      required: false,
+      relationTo: 'Media',
+    },
   ],
 };
 

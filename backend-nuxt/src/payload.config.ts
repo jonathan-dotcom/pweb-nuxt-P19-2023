@@ -8,15 +8,17 @@ import { buildConfig } from 'payload/config'
 
 import Users from './collections/Users'
 import Blog from './collections/Blog'
+import Media from './collections/Media'
 import Author from './collections/Author'
 
 export default buildConfig({
+  cors : "*",
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Users, Blog, Author],
+  collections: [Users, Blog, Media, Author],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
