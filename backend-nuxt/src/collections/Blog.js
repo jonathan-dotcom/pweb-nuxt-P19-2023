@@ -1,41 +1,42 @@
-// src/collections/Blog.js
+import payload from 'payload';
 
 /** @type {import('payload/types').CollectionConfig} */
 const Blog = {
-    slug : "blog",
-    fields : [
-      {
-        name: "title",
-        type: "text",
-        required: true,
-      },
-      {
-        name: 'date',
-        type: 'date',
-        admin: {
-          date: {
-              pickerAppearance: 'dayOnly',
-              displayFormat: 'd MMM yyy',
-          },
-        },
-      },
-      {
-        name: 'author',
-        type: 'relationship',
-        relationTo: ['author'],
-        filterOptions: ({ relationTo, siblingData }) => {
-          return {
-            division : { equals : 'content writer' }
-          }
+  slug: 'Blog',
+  admin: {
+    useAsTitle: 'name'
+  },
+  access: {
+    read: () => true,
+    update: () => true,
+    delete: () => true,
+    create: () => true,
+  },
+
+  fields: [
+    {
+      name: 'author',
+      type: 'relationship',
+      relationTo: ['author'],
+      filterOptions: ({ relationTo, siblingData }) => {
+        return {
+          division : { equals : 'content writer' }
         }
-      },
-      {
-        name: "content",
-        type: "textarea",
-        required: true,
-      },
-    ]
-  }
-  
-  export default Blog
-  
+      }
+    },
+    {
+      name: 'name',
+      label: 'Title',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'description',
+      label: 'Content',
+      type: 'textarea',
+      required: true,
+    },
+  ],
+};
+
+export default Blog;
