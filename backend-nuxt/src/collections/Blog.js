@@ -13,6 +13,45 @@ const Blog = {
     create: () => true,
   },
 
+  hooks: {
+    afterOperation: [
+      async (args) => {
+        console.dir(args.operation);
+        if (args.operation === "create") {
+          await payload.create({
+            collection: "Logs",
+            data: {
+              name: args.result.name,
+              log: args.result.id,
+              timestamp: new Date(),
+              action: "Blog Created",
+            },
+          });
+        } else if (args.operation === "deleteByID") {
+          await payload.create({
+            collection: "Logs",
+            data: {
+              name: args.result.name,
+              log: args.result.id,
+              timestamp: new Date(),
+              action: "Blog Deleted",
+            },
+          });
+        } else if (args.operation === "updateByID") {
+          await payload.create({
+            collection: "Logs",
+            data: {
+              name: args.result.name,
+              log: args.result.id,
+              timestamp: new Date(),
+              action: "Blog Updated",
+            },
+          });
+        }
+      },
+    ],
+  },
+
   fields: [
     {
       name: 'author',
