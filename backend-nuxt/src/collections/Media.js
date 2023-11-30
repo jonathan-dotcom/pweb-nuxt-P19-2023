@@ -4,7 +4,7 @@ import payload from 'payload';
 const Media = {
   slug: 'Media',
   admin: {
-    useAsTitle: 'url'
+    useAsTitle: 'alt'
   },
   access: {
     read: () => true,
@@ -12,7 +12,7 @@ const Media = {
     delete: () => true,
     create: () => true,
   },
-  
+
   hooks: {
     afterOperation: [
       async (args) => {
