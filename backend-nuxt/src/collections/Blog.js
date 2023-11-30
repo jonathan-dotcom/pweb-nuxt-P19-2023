@@ -76,7 +76,7 @@ const Blog = {
       required: true,
     },
     {
-      name: 'Media',
+      name: 'media',
       type: 'relationship',
       required: false,
       relationTo: 'Media',
