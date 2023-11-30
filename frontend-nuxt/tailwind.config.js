@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],
-      'logo': ['Poppins', 'sans-serif']
+      'logo': ['Kavoon', 'sans-serif']
     },
   },
   plugins: [],
