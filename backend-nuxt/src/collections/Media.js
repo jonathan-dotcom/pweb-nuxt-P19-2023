@@ -3,33 +3,61 @@ import payload from 'payload';
 /** @type {import('payload/types').CollectionConfig} */
 const Media = {
   slug: 'Media',
-  upload: {
-    staticURL: '/Media',
-    staticDir: 'Media',
-    imageSizes: [
-      {
-        name: 'thumbnail',
-        width: 400,
-        height: 300,
-        position: 'centre',
-      },
-      {
-        name: 'card',
-        width: 768,
-        height: 1024,
-        position: 'centre',
-      },
-      {
-        name: 'tablet',
-        width: 1024,
-        height: undefined,
-        position: 'centre',
+  admin: {
+    useAsTitle: 'url'
+  },
+  access: {
+    read: () => true,
+    update: () => true,
+    delete: () => true,
+    create: () => true,
+  },
+  
+  hooks: {
+    afterOperation: [
+      async (args) => {
+        console.dir(args.operation);
+        if (args.operation === "create") {
+          await payload.create({
+            collection: "Logs",
+            data: {
+              name: args.result.name,
+              log: args.result.id,
+              timestamp: new Date(),
+              action: "Media Uploaded",
+            },
+          });
+        } else if (args.operation === "deleteByID") {
+          await payload.create({
+            collection: "Logs",
+            data: {
+              name: args.result.name,
+              log: args.result.id,
+              timestamp: new Date(),
+              action: "Media Deleted",
+            },
+          });
+        } else if (args.operation === "updateByID") {
+          await payload.create({
+            collection: "Logs",
+            data: {
+              name: args.result.name,
+              log: args.result.id,
+              timestamp: new Date(),
+              action: "Media Updated",
+            },
+          });
+        }
       },
     ],
-    adminThumbnail: 'thumbnail',
-    mimeTypes: ['image/*'],
   },
+
   fields: [
+    {
+      name: 'url',
+      type: 'text',
+      label: 'Link to your media',
+    },
     {
       name: 'alt',
       type: 'text',
