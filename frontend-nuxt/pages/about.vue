@@ -1,6 +1,6 @@
 <template>
     <navbar/>
-    <div class="dark:bg-gray-800 dark:text-gray-50">
+    <div class="dark:text-gray-50">
         <div class="container mx-auto p-8">
             <h1 class="text-3xl font-bold mb-6 text-center">Meet Our Team</h1>
 
@@ -37,5 +37,5 @@
             </div>
         </div>
     </div>
-    <footer/>
+    <Footer/>
 </template>

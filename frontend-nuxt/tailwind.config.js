@@ -9,10 +9,6 @@ module.exports = {
     "./error.vue",
   ],
   theme: {
-    fontFamily: {
-      'sans': ['Helvetica', 'Arial', 'sans-serif'],
-      'logo': ['Kavoon', 'sans-serif']
-    },
   },
   plugins: [],
 }

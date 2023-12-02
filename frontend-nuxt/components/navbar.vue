@@ -1,14 +1,13 @@
 <template>
-    <nav class="bg-gray-800 p-6">
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <div class="flex items-center">
-          <a href="/home" class="text-white text-2xl font-sans-bold">JOCELLA</a>
+    <nav class="bg-gray-900 text-white p-6">
+      <div class="max-w-8xl mx-auto flex justify-between items-center">
+        <div class="flex items-center ">
+          <NuxtLink href="/" class="font-mono text-red text-2xl font-bold"><div class="">JoCeLa's Blogs</div></NuxtLink>
         </div>
-        <div class="flex space-x-6">
-          <a href="/home" class="text-white hover:text-gray-300">Home</a>
-          <a href="/about" class="text-white hover:text-gray-300">About</a>
-          <a href="/404" class="text-white hover:text-gray-300">Services</a>
-          <a href="/404" class="text-white hover:text-gray-300">Contact</a>
+        <div class="flex space-x-6 gap-8">
+          <NuxtLink to="/" class="text-white hover:text-indigo-600 font-sans font-bold">HOME</NuxtLink>
+          <NuxtLink to="/about" class="text-white hover:text-indigo-600 font-sans font-bold">ABOUT</NuxtLink>
+          <NuxtLink to="/404" class="text-white hover:text-indigo-600 font-sans font-bold">CONTACT</NuxtLink>
         </div>
       </div>
     </nav>
