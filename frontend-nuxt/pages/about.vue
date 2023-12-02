@@ -7,31 +7,31 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Team Member Card 1 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://via.placeholder.com/300" alt="Team Member" class="w-full h-56 object-cover object-center">
+                    <img src="frontend-nuxt\assets\images\marcel.jpeg" alt="Team Member" class="w-full h-56 object-cover object-center">
                     <div class="p-4">
-                        <h2 class="text-xl font-semibold mb-2">John Doe</h2>
-                        <p class="text-gray-700 mb-4">Frontend Developer</p>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales felis nec ligula cursus, sed sagittis libero viverra.</p>
+                        <h2 class="text-xl font-semibold mb-2">Marcelinus Alvinanda Chrisantya</h2>
+                        <p class="text-gray-700 mb-4">5027221012</p>
+                        <p class="text-gray-600">"Fish on, mancing mania mantap"</p>
                     </div>
                 </div>
 
                 <!-- Team Member Card 2 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://via.placeholder.com/300" alt="Team Member" class="w-full h-56 object-cover object-center">
+                    <img src="frontend-nuxt\assets\images\gebi.jpeg" alt="Team Member" class="w-full h-56 object-cover object-center">
                     <div class="p-4">
-                        <h2 class="text-xl font-semibold mb-2">Jane Smith</h2>
-                        <p class="text-gray-700 mb-4">UI/UX Designer</p>
-                        <p class="text-gray-600">Fusce aliquam urna sit amet lacinia cursus. Nulla non nunc ac ipsum placerat bibendum sed nec odio.</p>
+                        <h2 class="text-xl font-semibold mb-2">Gabriella Erlinda Wijaya</h2>
+                        <p class="text-gray-700 mb-4">5027221018</p>
+                        <p class="text-gray-600">"I once believed love would be burning red, but it's golden"</p>
                     </div>
                 </div>
 
                 <!-- Team Member Card 3 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://via.placeholder.com/300" alt="Team Member" class="w-full h-56 object-cover object-center">
+                    <img src="frontend-nuxt\assets\images\jojo.jpeg" alt="Team Member" class="w-full h-56 object-cover object-center">
                     <div class="p-4">
-                        <h2 class="text-xl font-semibold mb-2">Alex Johnson</h2>
-                        <p class="text-gray-700 mb-4">Marketing Manager</p>
-                        <p class="text-gray-600">Integer rutrum elit in purus eleifend, vitae dapibus lectus blandit. Aenean suscipit sed elit quis tristique.</p>
+                        <h2 class="text-xl font-semibold mb-2">Jonathan Adithya Baswara</h2>
+                        <p class="text-gray-700 mb-4">5027221062</p>
+                        <p class="text-gray-600">"Hooh"</p>
                     </div>
                 </div>
             </div>
