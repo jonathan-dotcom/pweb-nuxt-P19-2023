@@ -6,6 +6,13 @@ const Author = {
     admin : {
       useAsTitle : "nama"
     },
+    access: {
+      read: () => true,
+      update: () => true,
+      delete: () => true,
+      create: () => true,
+    },
+  
     fields : [
       {
         name: "nama",

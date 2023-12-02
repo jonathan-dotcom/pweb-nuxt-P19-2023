@@ -71,6 +71,12 @@ const Blog = {
     },
     {
       name: 'description',
+      label: 'Description',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'content',
       label: 'Content',
       type: 'textarea',
       required: true,
@@ -80,6 +86,11 @@ const Blog = {
       type: 'relationship',
       required: false,
       relationTo: 'Media',
+    },
+    {
+      name: 'label',
+      type: 'text',
+      required: true,
     },
   ],
 };
