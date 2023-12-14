@@ -45,6 +45,10 @@ const Pendaftaran: CollectionConfig = {
       ],
       defaultValue: 'Waiting'
     },
+    {
+      name : 'date',
+      type : 'date'
+    },
   ],
 }
 
