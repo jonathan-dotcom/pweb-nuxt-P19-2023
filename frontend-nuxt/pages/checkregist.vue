@@ -24,7 +24,11 @@ export default {
       try {
         const response = await fetch(`http://localhost:3100/api/pendaftaran?where[email][equals]=${this.email}`);
         const data = await response.json();
-        this.status = data.Status;
+        if (data.docs.length > 0) {
+          this.status = data.docs[0].Status;
+        } else {
+          this.status = 'belum teregistrasi';
+        }
       } catch (error) {
         console.error('Error:', error);
       }
