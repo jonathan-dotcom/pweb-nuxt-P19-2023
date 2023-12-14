@@ -11,6 +11,7 @@ import Blog from './collections/Blog'
 import Media from './collections/Media'
 import Author from './collections/Author'
 import Logs from './collections/Logs'
+import Pendaftaran from './collections/Pendafataranlomba'
 
 export default buildConfig({
   cors : "*",
@@ -19,7 +20,7 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Users, Blog, Media, Author, Logs],
+  collections: [Users, Blog, Media, Author, Logs, Pendaftaran],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
